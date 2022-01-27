@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>台灣發展歷史網頁</title>
+    <meta
+      name="description"
+      content="此網站介紹台灣過去70年的經濟發展與相關政策"
+    />
+    <link rel="shortcut icon" href="./" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      type="text/javascript"
+      src="https://www.gstatic.com/charts/loader.js"
+    ></script>
+    <script type="text/javascript">
+      google.charts.load("current", { packages: ["corechart"] });
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ["Year", "GDP"],
+          ["1960", 34394],
+          ["1965", 114762],
+          ["1970", 231397],
+          ["1975", 601778],
+          ["1980", 1522459],
+          ["1980", 2535056],
+          ["1990", 4474288],
+          ["1995", 7391062],
+          ["2000", 10328549],
+          ["2005", 12036675],
+          ["2010", 14060345],
+        ]);
+
+        var options = {
+          title: "台灣歷年GDP",
+          curveType: "function",
+          legend: { position: "bottom" },
+        };
+
+        var chart = new google.visualization.LineChart(
+          document.getElementById("curve_chart")
+        );
+
+        chart.draw(data, options);
+      }
+    </script>
+    <link rel="stylesheet" href="./style.css" />
+
+    <link rel="stylesheet" href="./twicon/twicon.css" />
+  </head>
+  <body>
+    <!--標題-->
+
+    <header>
+      <h1 class="headertitle">台灣經濟發展歷史</h1>
+      <h3 class="headertext">過去70年台灣經濟發展簡史以及相關政策</h3>
+    </header>
+
+    <!--導覽列-->
+    <nav>
+      <ul>
+        <li>
+          <a href="./index.html"><i class="twicon-main-island"></i> 首頁</a>
+        </li>
+        <li>
+          <a href="./agriculture.html"
+            ><i class="twicon-lovers-brg"></i> 農業改革</a
+          >
+        </li>
+        <li>
+          <a href="./industralization.html"
+            ><i class="twicon-nt-mus"></i> 工業改革</a
+          >
+        </li>
+
+        <li>
+          <a href="#" class="active"
+            ><i class="twicon-black-bear"></i> 關於作者</a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <!--主要內容-->
+    <main>
+      <section class="right">
+        <img src="./jerry.png" alt="author" class="mypic" />
+
+        <p></p>
+      </section>
+      <section class="left" id="authorLeft">
+        <h2>林哲漳 Jerry Lin</h2>
+        <hr />
+        <p>
+          目前就讀於國立政治大學資管所一年級，平時喜歡透過自學來學習程式語言<br />
+          此網站為線上課程的 projects
+          之一，希望未來可以再學習更多的網頁前後端知識
+        </p>
+        <br />
+        <h3>技能</h3>
+        <ul style="list-style: square">
+          <li>HTML5</li>
+          <li>CSS3</li>
+          <li>javascript</li>
+          <li>SQL</li>
+          <li>Java</li>
+          <li>Python</li>
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>
