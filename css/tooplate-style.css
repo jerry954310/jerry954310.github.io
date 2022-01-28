@@ -1137,6 +1137,7 @@ footer .footer-item ul.social-icons li a:hover {
   
 }
 
+
 @media (max-width:992px) {
 
   .contact-intro {
@@ -1191,6 +1192,7 @@ footer .footer-item ul.social-icons li a:hover {
   }
 
   .left-right-image .right-image .blue-border-button {
+    
     margin-bottom: 30px;
   }
 

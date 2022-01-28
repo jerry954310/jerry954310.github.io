@@ -20,10 +20,10 @@ header {
   flex-wrap: wrap;
 
   div.logo {
+    margin-left: 2rem;
+    flex: 5 1 400px;
     display: flex;
     align-items: center;
-    flex: 5 1 400px;
-    margin-left: 2rem;
     img {
       width: 6vw;
       height: 6vw;
@@ -31,10 +31,13 @@ header {
   }
   nav {
     flex: 2 1 400px;
+    margin-right: 2rem;
+
     ul {
       display: flex;
-      list-style-type: none;
       justify-content: space-around;
+
+      list-style: none;
       li {
         a {
           color: #09777d;
@@ -45,9 +48,8 @@ header {
     }
   }
 }
-
 main {
-  section.backImage {
+  section.backimg {
     min-height: 90vh;
     width: 100%;
     background-image: url("../Pictures/pexels-photo-416676.jpeg");
@@ -56,16 +58,16 @@ main {
     position: relative;
     z-index: 0;
 
+    text-align: center;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    text-align: center;
 
     h3 {
-      font-size: 3.5rem;
+      font-size: 2.5rem;
       color: white;
-      margin: 2rem 0rem;
+      margin: 1rem 0rem;
     }
 
     button.start {
@@ -95,15 +97,17 @@ main {
     text-align: center;
 
     h2 {
-      font-size: 2rem;
       margin: 2rem 0rem;
+      font-size: 2rem;
     }
 
     section.cards {
       display: flex;
-      width: 80%;
       min-height: 80vh;
+
       flex-wrap: wrap;
+      /*左右留白*/
+      width: 80%;
 
       div.card {
         display: flex;
@@ -119,68 +123,86 @@ main {
           border-radius: 50%;
         }
         h4 {
-          font-size: 2rem;
           margin: 1rem 0rem;
+
+          font-size: 2rem;
         }
         p {
           font-size: 1.25rem;
         }
         a {
           margin: 1rem 0rem;
+
           text-decoration: none;
           padding: 1rem 1.5rem;
           background-color: #09777d;
           color: white;
+          font: 1.25rem;
+        }
+      }
+    }
+  }
+  footer {
+    min-height: 10vw;
+    background-color: lightgrey;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    h4 {
+      font-size: 2rem;
+      margin: 1rem;
+    }
+    ul {
+      width: 40%;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      list-style: none;
+      margin: 1rem;
+      justify-content: center;
+
+      li {
+        flex-basis: 100px;
+        a {
           font-size: 1.25rem;
+          margin: 0rem 1.5rem;
+          text-decoration: none;
+          color: white;
+        }
+      }
+    }
+    section.links {
+      a {
+        img {
+          width: 3vw;
+          height: 3vw;
+          margin: 0rem 1.5rem;
         }
       }
     }
   }
 }
 
-footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-height: 40vh;
-  justify-content: space-around;
-  background-color: rgb(207, 207, 207);
-
-  div.logo {
-    display: flex;
-    align-items: center;
-    img {
-      width: 6vw;
-      height: 6vw;
-    }
-  }
-
-  nav {
-    width: 30%;
-    ul {
-      display: flex;
-      list-style-type: none;
-      width: 100%;
-      justify-content: space-around;
-      flex-wrap: wrap;
-      li {
-        flex-basis: 100px;
-        a {
-          color: white;
-          font-weight: 600;
-          text-decoration: none;
-          font-size: 1.35rem;
-        }
+@media screen and (max-width: 500px) {
+  header {
+    div.logo {
+      margin-left: 0rem;
+      img {
+        width: 10vw;
+        height: 10vw;
       }
     }
   }
-
-  section.links {
-    a {
-      margin: 0rem 1rem;
-      img {
-        width: 5vw;
-        height: 5vw;
+  footer {
+    section.links {
+      a {
+        img {
+          width: 10vw;
+          height: 10vw;
+        }
       }
     }
   }
@@ -195,36 +217,6 @@ footer {
             width: 40vw;
             height: 40vw;
           }
-        }
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 550px) {
-  header {
-    div.logo {
-      margin-left: 0.5rem;
-      img {
-        width: 15vw;
-        height: 15vw;
-      }
-    }
-  }
-
-  footer {
-    div.logo {
-      img {
-        width: 15vw;
-        height: 15vw;
-      }
-    }
-    section.links {
-      margin-top: 1rem;
-      a {
-        img {
-          width: 10vw;
-          height: 10vw;
         }
       }
     }
